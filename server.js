@@ -8,10 +8,8 @@ const Clarifai = require ('clarifai');
 const db = knex({
     client: 'pg',
     connection: {
-        host: 'postgresql-elliptical-81872',
-        user: 'postgres',
-        password: 'martin1029',
-        database: 'smart-brain'
+        host: process.env.DATABASE_URL,
+        ssl: true,
     }
 });
 
